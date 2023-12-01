@@ -85,7 +85,7 @@ def start(message):
 
 @bot.message_handler(commands=['help'])
 def start_message(message):
-    bot.send_message(message.chat.id, 'Я умею...')
+    bot.send_message(message.chat.id, 'Я умею опредять чтность недели, узнавать расписание в МТУСИ, и выдовать ссылку на главный сайт вуза.')
 
 
 @bot.message_handler(commands=['week'])
