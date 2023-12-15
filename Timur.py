@@ -14,7 +14,7 @@ conn = psycopg2.connect(database="schedule_db",
 
 cursor = conn.cursor()
 
-token = "6979924108:AAFfjcD4urKPiVDEU_D_m87zwxnk16-arcQ"
+token = ""
 bot = telebot.TeleBot(token)
 
 def weekday(day: str, message):
@@ -85,7 +85,7 @@ def start(message):
 
 @bot.message_handler(commands=['help'])
 def start_message(message):
-    bot.send_message(message.chat.id, 'Я умею опредять чтность недели, узнавать расписание в МТУСИ, и выдовать ссылку на главный сайт вуза.')
+    bot.send_message(message.chat.id, 'Я умею опредять чётность недели, узнавать расписание в МТУСИ, и выдовать ссылку на главный сайт вуза.')
 
 
 @bot.message_handler(commands=['week'])
